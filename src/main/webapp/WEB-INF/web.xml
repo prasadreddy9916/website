@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app 
+    xmlns="https://jakarta.ee/xml/ns/jakartaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+    version="6.0">
+
+
+    <!-- Application Display Name -->
+    <display-name>website</display-name>
+
+    <!-- Servlet Configuration -->
+    <servlet>
+        <servlet-name>DeviceCheckServlet</servlet-name>
+        <servlet-class>DeviceCheckServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeviceCheckServlet</servlet-name>
+        <url-pattern>/setDeviceToken</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeviceCheckServlet</servlet-name>
+        <url-pattern>/pass</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeviceCheckServlet</servlet-name>
+        <url-pattern>/block</url-pattern>
+    </servlet-mapping>
+
+    <!-- Default Welcome File -->
+    <welcome-file-list>
+        <welcome-file>login_home.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Filter Configuration -->
+    <filter>
+        <filter-name>DeviceFilter</filter-name>
+        <filter-class>DeviceFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>DeviceFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- Session Timeout (12 hours) -->
+    <session-config>
+        <session-timeout>720</session-timeout>
+    </session-config>
+
+</web-app>

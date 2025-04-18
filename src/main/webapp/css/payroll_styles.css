@@ -1,0 +1,86 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ecf0f1;
+    color: #2c3e50;
+}
+
+.container {
+    max-width: calc(100% - 40px);
+    margin-left: 20px; /* Offset for navbar */
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+    animation: fadeIn 0.5s ease;
+}
+
+.header {
+    background: #34495e;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.dashboard-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Reduced from 20px to 15px for less spacing */
+    padding: 20px 0;
+    justify-content: flex-start; /* Changed from space-between to flex-start */
+}
+
+.dashboard-box {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 calc(33.33% - 15px); /* Adjusted for new gap value */
+    min-width: 250px; /* Minimum width for responsiveness */
+    max-width: calc(33.33% - 15px); /* Adjusted for new gap value */
+}
+
+.dashboard-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    background: #3498db;
+    color: white;
+}
+
+.dashboard-box h2 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+
+.dashboard-box p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.content {
+    animation: fadeIn 0.5s ease;
+}

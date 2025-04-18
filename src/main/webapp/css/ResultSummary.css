@@ -1,0 +1,122 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ecf0f1;
+    color: #2c3e50;
+}
+
+.results-summary {
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #34495e;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+    background: #f9f9f9;
+    position: sticky;
+    top: 54px; /* Height of header (15px padding top + 15px padding bottom + 24px font-size) */
+    z-index: 900;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.table-container {
+    flex: 1; /* Takes remaining space */
+    overflow-x: auto; /* Horizontal scroll if needed */
+    overflow-y: auto; /* Vertical scroll for rows */
+    position: relative; /* Makes sticky positioning relative to this container */
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+th {
+    background: #2c3e50;
+    color: white;
+    font-weight: bold;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0; /* Sticks to the top of .table-container, not the viewport */
+    z-index: 800; /* Ensures it stays above tbody rows */
+    background: #2c3e50; /* Matches th background */
+}
+
+.sticky-header th {
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+tbody tr:hover {
+    background: #ecf0f1;
+}
+
+.error-message {
+    color: red;
+    padding: 10px;
+    text-align: center;
+}

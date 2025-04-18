@@ -1,0 +1,340 @@
+/* payslip_styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f7fa;
+    color: #333;
+}
+
+.container {
+    max-width: calc(100% - 40px);
+    margin: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+}
+
+.header {
+    background: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+}
+
+.generate-btn, .view-btn, .download-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.generate-btn {
+    background: #27ae60;
+}
+
+.generate-btn:hover {
+    background: #219653;
+}
+
+.view-btn {
+    background: #3498db;
+    margin-right: 5px;
+}
+
+.view-btn:hover {
+    background: #2980b9;
+}
+
+.download-btn {
+    background: #e67e22;
+}
+
+.download-btn:hover {
+    background: #d35400;
+}
+
+.filters {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 150px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.filter-group input, .filter-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.content {
+    padding: 20px;
+}
+
+h2 {
+    margin: 20px 0 10px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+.scrollable table {
+    min-width: 600px;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+th:last-child, td:last-child {
+    border-right: none;
+}
+
+th {
+    background: #2c3e50;
+    color: white;
+    position: sticky;
+    top: 0; /* Stick to the top of the table container */
+    z-index: 10; /* Lower z-index to avoid overlap with modal */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow-y: auto;
+}
+
+.modal-header {
+    background: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 20; /* Higher than table headers but lower than popup */
+    margin-top: 0; /* Remove any top margin */
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 22px;
+    text-align: center;
+    flex-grow: 1;
+    color: white;
+}
+
+.cancel-btn {
+    padding: 10px 20px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background: #c0392b;
+}
+
+.payslip-content {
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 0; /* Ensure no space above content */
+}
+
+.payslip-content h3 {
+    color: #2c3e50;
+    margin: 20px 0 10px;
+    font-size: 18px;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+.payslip-content p {
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+}
+
+.payslip-content p strong {
+    font-weight: bold;
+    flex: 0 0 200px;
+    color: #2c3e50;
+}
+
+.payslip-content p span {
+    flex: 1;
+    text-align: left;
+}
+
+.payslip-content table {
+    width: 100%;
+    max-width: 700px;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+.payslip-content th, .payslip-content td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.payslip-content th {
+    background: #34495e;
+    color: white;
+    font-weight: bold;
+}
+
+.payslip-content td {
+    background: #f9f9f9;
+}
+
+.payslip-content tr:last-child td {
+    font-weight: bold;
+    background: #ecf0f1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .payslip-content p {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .payslip-content p strong {
+        flex: none;
+        width: auto;
+        margin-bottom: 5px;
+    }
+
+    .payslip-content p span {
+        text-align: left;
+    }
+
+    .payslip-content table {
+        font-size: 12px;
+    }
+
+    .payslip-content th, .payslip-content td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .generate-btn, .view-btn, .download-btn, .cancel-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .modal-header h2 {
+        font-size: 18px;
+    }
+
+    .payslip-content {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .payslip-content h3 {
+        font-size: 16px;
+    }
+}
+
+.popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    z-index: 300; /* Higher than modal headers */
+    display: none;
+}
+
+.popup.success {
+    background-color: #27ae60;
+}
+
+.popup.error {
+    background-color: #e74c3c;
+}

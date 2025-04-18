@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+/*      background: linear-gradient(135deg, #6a11cb, #2575fc);
+*/
+    /* background-image: url(images/sample_bannerimg.jpg); */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      flex-direction: row;
+    }
+    .login_img{
+        width: 50px;
+        height: 50px;
+      }
+    
+  }
+
+  .left-panel {
+    flex: 1;
+    /* background: linear-gradient(299deg, #8beaef, #db38f6); */
+/*       background: linear-gradient(135deg, #6a11cb, #2575fc);*/
+/*      background-image: url(images/sample_bannerimg3.jpg);*/
+    color: #000;
+    padding: 50px;
+    text-align: center;
+    position: relative;
+  }
+  .login_img{
+    width: 350px;
+    height: 350px;
+    margin-left: -25%;
+  }
+
+  .left-panel p {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    
+  }
+  .left-panel p span{
+    color: #6a11cb;
+    font-weight: bold;
+  }
+
+  .right-panel {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .right-panel h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6a11cb;
+    margin-bottom: 10px;
+  }
+
+  .right-panel h2 span {
+         color: #2575fc;
+    /* color: #ef0fed; */
+  }
+
+  .form-control {
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #6a11cb;
+    border-radius: 0;
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .form-control:focus {
+    border-color: #2575fc;
+    box-shadow: none;
+  }
+
+  .btn-custom {
+    background: linear-gradient(135deg, #2575fc, #6a11cb); 
+    /* background: linear-gradient(299deg, #8beaef, #db38f6); */
+    border: none;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .btn-custom:hover {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color:#fff;
+  }
+
+  .form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+
+  .form-footer a {
+    text-decoration: none;
+    color: #6a11cb;
+  }
+
+  .form-footer a:hover {
+    text-decoration: underline;
+  }
+
+  .create-account {
+    margin-top: 20px;
+    margin-left: 50%;
+    /* text-align: center; */
+  }
+
+  .create-account a {
+    text-decoration: none;
+    color: #6a11cb;
+  }
+
+  .create-account a:hover {
+    text-decoration: underline;
+  }
+
+  .create-account-signup{
+    margin-top: 20px;
+    margin-left: 77%;
+  }
+
+  .create-account-signup a {
+    text-decoration: none;
+    color: #6a11cb;
+  }
+
+  .create-account-signup a:hover {
+    text-decoration: underline;
+  }

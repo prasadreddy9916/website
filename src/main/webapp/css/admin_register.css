@@ -1,0 +1,247 @@
+body {
+    background: #f4f7fa;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container-fluid {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.register-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 90vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.left-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f7fa;
+    min-width: 300px;
+    height: 100%;
+    padding: 20px 0; /* Space at top and bottom */
+}
+
+.left-panel-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.left-panel-img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    margin-bottom: 15px; /* Space between image and text */
+}
+
+.left-panel p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.left-panel p span {
+    color: #007bff;
+    font-weight: 500;
+}
+
+.right-panel {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100%;
+    min-width: 300px;
+}
+
+.header {
+    background: #34495e;
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.form-label i {
+    margin-right: 8px;
+    color: #007bff;
+}
+
+.form-control, .form-select {
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    background: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+}
+
+.error-message {
+    color: #dc3545;
+    text-align: center;
+}
+
+.email-verified {
+    color: #28a745;
+}
+
+.password-toggle {
+    cursor: pointer;
+}
+
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .register-container {
+        flex-direction: column;
+        height: auto;
+        max-height: 100vh;
+    }
+
+    .left-panel {
+        flex: none;
+        height: 250px;
+        width: 100%;
+        min-width: 0;
+        padding: 15px 0;
+    }
+
+    .left-panel-img {
+        max-height: 150px;
+        margin-bottom: 10px;
+    }
+
+    .left-panel p {
+        font-size: 14px;
+    }
+
+    .right-panel {
+        flex: none;
+        width: 100%;
+        padding: 15px;
+        height: auto;
+        min-width: 0;
+    }
+
+    .header h2 {
+        font-size: 20px;
+    }
+
+    .form-control, .form-select {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .d-flex {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .left-panel {
+        height: 200px;
+        padding: 10px 0;
+    }
+
+    .left-panel-img {
+        max-height: 120px;
+        margin-bottom: 8px;
+    }
+
+    .left-panel p {
+        font-size: 12px;
+    }
+
+    .right-panel {
+        padding: 10px;
+    }
+
+    .header h2 {
+        font-size: 18px;
+    }
+
+    .form-control, .form-select {
+        font-size: 12px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .input-group .btn {
+        padding: 6px 10px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+    .register-container {
+        max-width: 800px;
+    }
+
+    .left-panel, .right-panel {
+        min-width: 350px;
+    }
+
+    .left-panel-img {
+        max-height: 60%;
+    }
+
+    .left-panel p {
+        font-size: 14px;
+    }
+}

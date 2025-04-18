@@ -1,0 +1,174 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f6fa;
+    color: #333;
+}
+
+.exam-dashboard {
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    max-width: 1200px;
+    margin: 20px auto;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-header {
+    background: #34495e;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.dashboard-filters {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px 25px;
+    background: #f9fafc;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 58px;
+    z-index: 900;
+}
+
+.filter-item {
+    flex: 1;
+    min-width: 180px;
+}
+
+.filter-item label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #34495e;
+}
+
+.filter-item select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #fff;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.dashboard-table-container {
+    flex: 1;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    overflow-y: auto; /* Enables vertical scrolling */
+    max-height: calc(100vh - 158px);
+    padding: 0 25px;
+    -ms-overflow-style: none; /* Hides scrollbars in IE/Edge */
+    scrollbar-width: none; /* Hides scrollbars in Firefox */
+}
+
+/* Hide both horizontal and vertical scrollbars in WebKit browsers (Chrome, Safari) */
+.dashboard-table-container::-webkit-scrollbar {
+    display: none; /* Completely hides both scrollbars */
+}
+
+.dashboard-table {
+    width: 100%;
+    min-width: 1000px;
+    border-collapse: collapse;
+    border: 2px solid #34495e;
+}
+
+.dashboard-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 800;
+    background: #34495e;
+    color: white;
+}
+
+.dashboard-table th {
+    padding: 15px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    border-right: 1px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.dashboard-table th:last-child {
+    border-right: none;
+}
+
+.dashboard-table tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+    background: #ffffff;
+    transition: background 0.3s;
+}
+
+.dashboard-table tbody tr:hover {
+    background: #f1f5f9;
+}
+
+.dashboard-table td {
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.dashboard-table td:last-child {
+    border-right: none;
+}
+
+.action-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.publish-btn {
+    background: #43a047;
+    color: white;
+}
+
+.publish-btn:hover {
+    background: #388e3c;
+    transform: scale(1.05);
+}
+
+.publish-btn:disabled {
+    background: #bdbdbd;
+    cursor: not-allowed;
+}
+
+.dashboard-error {
+    color: #d32f2f;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Add to existing CSS */
+.publish-btn.disabled {
+    background: #bdbdbd; /* Grey color */
+    cursor: not-allowed;
+}
