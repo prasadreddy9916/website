@@ -15,7 +15,7 @@
   <div class="container">
     <div class="left-panel">
       <img src="images/login.jpg" class="login_img" alt="Login Image">
-      <p>Sign in to your account <span>www.cyetechnology.in</span></p>
+      <p>Prasad Sign in to your account <span>www.cyetechnology.in</span></p>
     </div>
     <div class="right-panel">
       <h2>Hello! <span>Login Your Account</span></h2>
