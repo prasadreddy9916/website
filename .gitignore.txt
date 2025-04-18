@@ -1,0 +1,13 @@
+# Java
+*.class
+*.log
+*.war
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Build folders
+build/
+bin/
